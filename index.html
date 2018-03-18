@@ -3,27 +3,71 @@
 <head>
     <meta charset="utf-8" />
     <title>Кино.бай</title>
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+  color:#333;
+  font:.8em tahoma, veranda,arial normal;
+}
+a{
+  text-decoration:none;
+  color:inherit;
+}
+a:hover,mark,h1h6
+{
+  color:#f60;
+}
+h1{
+  font-size:1.3em;
+  font-weight:normal;
+}
+img{
+  height:25em;
+}
+figcaption{
+  font-size:.9em;
+}
+.header-container h1>a{
+  text-shadow:.1em .1em #4a4a4a;
+  font-size:2em;
+  font-weight:bold;
+}
+.search-container input[type=search]{
+  font-size:1em;
+}
+.search-container button{
+  font-size:1em;
+  cursor:pointer;
+}
+.search-container .fa{
+  color:#8e8e8e;
+}
+.menubar-container ul{
+  list-style-type:none;
+}
+.content section h1{
+  color:inherit;
+}
+</style>
 </head>
+
+
 <body>
 
-
+<div class="center_column">
 <header>
-    <p>
-        <strong>Внимание! </strong>Этот сайт не использует технологии
-        <abbr title="Cascading Style Sheets">CSS</abbr> и JavaScript, он создан только при помощи
-        <abbr title="Hypertext Markup Language">HTML</abbr>
-    </p>
 
-
+<div class="header-container">
     <h1><a href="index.html">Кино.бай</a></h1>
-    <p>Кино на любой вкус</p>
-
+    <div class="search-container">
     <form>
       <input name="search" type="search" placeholder="Поиск" />
-      <button type="submit">Искать</button>
+      <button type="submit"><span class="fa fa-search"></span></button>
     </form>
+  </div>
+</div>
 
-    <nav>
+    <nav class="menubar-container">
       <ul style="list-style-type: none;" role="menubar">
         <li role="menuitem"><a href="#">Афиша</a></li>
         <li role="menuitem"><a href="#">Фильмы</a></li>
@@ -33,18 +77,11 @@
       </ul>
     </nav>
 
-
-
-    <blockquote>
-        Бедствием немого кино были ненужные надписи,<br />
-        бедствием нынешнего — ненужные диалоги.<br />
-        <cite>Рене Клер</cite>
-    </blockquote>
-
 </header>
-
+<div class="content">
 <main>
     <p>Результаты поиска по запросу: <strong><mark>Властелин колец</mark></strong></p>
+</div>
     <hr />
 
     <article>
@@ -55,12 +92,14 @@
               </a>
             </h1>
         </header>
+        <div class="movie-description">
         <figure>
           <img src="img1.jpg" />
           <figcaption>
             Обложка фильма
           </figcaption>
         </figure>
+        <div>
         <section>
             <h1>Описание</h1>
             <p>
@@ -74,6 +113,8 @@
                 Элайджа Вуд, Вигго Мортенсен, Шон Эстин, Иэн МакКеллен, Орландо Блум, Доминик Монахэн, Билли Бойд, Энди Серкис, Миранда Отто, Бернард Хилл
             </p>
         </section>
+      </div>
+    </div>
         <footer>
             <p>
                 <strong>Год:</strong> <time datetime="2003-12-23">2003</time>,
@@ -92,12 +133,14 @@
               </a>
             </h1>
         </header>
+        <div class="movie-description">
         <figure>
           <img src="img3.jpg" />
           <figcaption>
             Обложка фильма
           </figcaption>
         </figure>
+        <div>
         <section>
             <h1>Описание</h1>
             <p>
@@ -112,6 +155,8 @@
                 Элайджа Вуд, Шон Эстин, Орландо Блум, Вигго Мортенсен, Иэн МакКеллен, Доминик Монахэн, Миранда Отто, Джон Рис-Дэвис, Энди Серкис, Билли Бойд
             </p>
         </section>
+      </div>
+    </div>
         <footer>
             <p>
                 <strong>Год:</strong> <time datetime="2003-12-23">2002</time>,
@@ -130,12 +175,14 @@
               </a>
             </h1>
         </header>
+        <div class="movie-description">
         <figure>
           <img src="img2.jpg" />
           <figcaption>
             Обложка фильма
           </figcaption>
         </figure>
+        <div>
         <section>
             <h1>Описание</h1>
             <p>
@@ -149,6 +196,8 @@
                 Элайджа Вуд, Иэн МакКеллен, Вигго Мортенсен, Шон Бин, Орландо Блум, Джон Рис-Дэвис, Иэн Холм, Шон Эстин, Билли Бойд, Доминик Монахэн
             </p>
         </section>
+      </div>
+    </div>
         <footer>
             <p>
                 <strong>Год:</strong> <time datetime="2003-12-23">2001</time>,
@@ -180,13 +229,26 @@
       <br /><small>Читать далее...</small>
     </p>
   </section>
+<article>
+<header>
+  <h1>Цитата дня</h1>
+         </header>
+         <section>
+           <blockquote>
+               Бедствием немого кино были ненужные надписи,<br />
+               бедствием нынешнего — ненужные диалоги.<br />
+               <cite>Рене Клер</cite>
+           </blockquote>
+         </section>
+       </article>
 </aside>
-
+</div>
 <footer>
+  <div class="footer-container">
     <a href="#top">Наверх</a>
     <address>За какой-либо информацией обращайтесь по адресу <a type="author" href="mailto:john.smith@gmail.com"><strong>john.smith@gmail.com</strong></a></address>
     <p><small>© <time datetime="2018-03-07">2018</time>, Кино.бай</small></p>
 </footer>
-
+</div>
 </body>
 </html>
