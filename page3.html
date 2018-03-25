@@ -3,49 +3,46 @@
 <head>
     <meta charset="utf-8" />
     <title>Кино.бай</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
-<header>
-    <p>
-        <strong>Внимание! </strong>Этот сайт не использует технологии
-        <abbr title="Cascading Style Sheets">CSS</abbr> и JavaScript, он создан только при помощи
-        <abbr title="Hypertext Markup Language">HTML</abbr>
-    </p>
+  <div class="center_column">
+    <header>
+        <div class="header-container">
+          <h1><a href="index.html">Кино.бай</a></h1>
 
-    <h1><a href="index.html">Кино.бай</a></h1>
-    <p>Кино на любой вкус</p>
+          <div class="search-container">
+            <form>
+              <input name="search" type="search" placeholder="Поиск..." />
+              <button type="submit"><span class="fa fa-search"></span></button>
+            </form>
+          </div>
+        </div>
 
-    <form>
-      <input name="search" type="search" placeholder="Поиск" />
-      <button type="submit">Искать</button>
-    </form>
+        <nav class="menubar-container">
+          <ul role="menubar">
+            <li role="menuitem"><a href="#">Афиша</a></li>
+            <li role="menuitem"><a href="#">Фильмы</a></li>
+            <li role="menuitem"><a href="#">Рейтинги</a></li>
+            <li role="menuitem"><a href="#">Журнал</a></li>
+            <li role="menuitem"><a href="#">Оскар 2018</a></li>
+          </ul>
+        </nav>
 
-    <nav>
-      <ul style="list-style-type: none;" role="menubar">
-        <li role="menuitem"><a href="#">Афиша</a></li>
-        <li role="menuitem"><a href="#">Фильмы</a></li>
-        <li role="menuitem"><a href="#">Рейтинги</a></li>
-        <li role="menuitem"><a href="#">Журнал</a></li>
-        <li role="menuitem"><a href="#">Оскар 2018</a></li>
-      </ul>
-    </nav>
 
-    <blockquote>
-        Бедствием немого кино были ненужные надписи,<br />
-        бедствием нынешнего — ненужные диалоги.<br />
-        <cite>Рене Клер</cite>
-    </blockquote>
 
-</header>
-
+  </header>
+<div class="content">
 <main>
   <article>
       <header>
           <h1>
-            Властелин колец: Братство кольца
+            Властелин колец: Возвращение Короля
           </h1>
       </header>
+        <div class="movie-description">
       <figure>
         <img src="img2.jpg" />
         <figcaption>
@@ -55,45 +52,47 @@
       <section>
           <h1>Описание</h1>
           <p>
-              Сказания о Средиземье — это хроника Великой войны за Кольцо, войны, длившейся не одну тысячу лет.
-              Тот, кто владел Кольцом, получал власть над всеми живыми тварями, но был обязан служить злу.
+
+              Последняя часть трилогии о Кольце Всевластия и о героях, взявших на себя бремя спасения Средиземья.
+              Повелитель сил Тьмы Саурон направляет свои бесчисленные рати под стены Минас-Тирита, крепости Последней Надежды.
           </p>
       </section>
       <section>
           <h1>Актеры</h1>
           <p>
-              Элайджа Вуд, Иэн МакКеллен, Вигго Мортенсен, Шон Бин, Орландо Блум, Джон Рис-Дэвис, Иэн Холм, Шон Эстин, Билли Бойд, Доминик Монахэн
+              Элайджа Вуд, Вигго Мортенсен, Шон Эстин, Иэн МакКеллен, Орландо Блум, Доминик Монахэн, Билли Бойд, Энди Серкис, Миранда Отто, Бернард Хилл
           </p>
       </section>
-      <section>
-          <h1>Трейлер</h1>
-          <iframe width="420" height="315" src="https://www.youtube.com/embed/ddmcFDoCAq8">
-          </iframe>
-      </section>
+    </div>
+  </div>
+  <section class="trailer">
+      <h1>Трейлер</h1>
+      <iframe width="420" height="315" src="https://www.youtube.com/embed/ddmcFDoCAq8">
+      </iframe>
+  </section>
       <footer>
-        <table border="1">
-          <thead>
-            <tr>
-              <th>Год</th>
-              <th>Оценка IMDb</th>
-              <th>Бюджет</th>
-              <th>Страна</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><time datetime="2003-12-23">2001</time></td>
-              <td>8.80 <small>(1 389 831)</small></td>
-              <td>$93 000 000</td>
-              <td>США</td>
-            </tr>
-          </tbody>
-        </table>
+          <table border="1">
+            <thead>
+              <tr>
+                <th>Год</th>
+                <th>Оценка IMDb</th>
+                <th>Бюджет</th>
+                <th>Страна</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><time datetime="2003-12-23">2003</time></td>
+                <td>8.90 <small>(1 349 172)</small></td>
+                <td>$94 000 000</td>
+                <td>США</td>
+              </tr>
+            </tbody>
+          </table>
       </footer>
   </article>
 
-  <section>
-    <hr />
+  <section class="comments">
     <form>
       <div>
         <label for="username">Имя Фамилия:</label>
@@ -104,31 +103,10 @@
         <label for="email">Почта:</label>
         <input id="email" name="email" type="email" required />
       </div>
-      <br />
       <div>
-        <details>
-          <summary>Дополнительная информация</summary>
-          <fieldset>
-            <legend>Пол</legend>
-            <label for="male">
-              <input id="male" type="radio" name="sex" />
-              Мужской
-            </label>
-            <label for="female">
-              <input id="female" type="radio" name="sex" />
-              Женский
-            </label>
-          </fieldset>
-          <div>
-            <label for="recommendation">
-              <input id="recommendation" type="checkbox" name="recommendation" />
-              Буду рекомендовать фильм
-            </label>
-          </div>
-        </details>
-        <br />
         <div>
-          <textarea name="comment" required></textarea>
+          <label class="required" for="comment">Коментарий</label>
+          <textarea id="comment" name="comment" type="comment" required></textarea>
         </div>
         <button type="submit">Добавить комментарий</button>
       </div>
