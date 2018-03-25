@@ -16,7 +16,23 @@
         text-decoration: none;
         color: inherit;
       }
-      a:hover, mark, h1 {
+      a[href="#top"]{
+        position: relative;
+        }
+        a[href=#"#top"]:after{
+          content:"";
+          width:0;
+          height:0;
+          border-left:.35em solid transparent;
+          border-right:.35em solid transparent;
+          border-bottom .7em solid currentColorr;
+          position:absolute;
+          top:.3em;
+          left:3.7em;
+        }
+      a:hover, mark, h1,
+        .content article>header,
+        .content aside>header{
         background: transparent;
         color: var(--orangeColor);
       }
@@ -32,8 +48,19 @@
         padding: 0;
       }
       figcaption {
+        text-align:center;
         font-size: .9em;
       }
+      .header-container,
+      .menubar-container ul{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+      }
+      .header-container{
+        justify-content: space-between;
+      }
+
       .header-container h1 > a {
         text-shadow: .12em .12em #4a4a4a;
         font-size: 2em;
@@ -52,6 +79,7 @@
         border: none;
         background: #ddd;
         padding: .5em 1em;
+        float:right;
       }
       .search-container button:hover {
         background: #ccc;
@@ -64,6 +92,7 @@
       }
       .menubar-container ul {
         list-style-type: none;
+        justify-content: center;
         margin: 0;
         border-top: .1em solid rgba(113, 113, 113, 0.7);
       }
@@ -73,6 +102,7 @@
       }
       .menubar-container ul > li a:hover {
         color: white;
+        backgroud:#636363;
       }
       .content section h1 {
         color: inherit;
@@ -85,6 +115,7 @@
       }
       .header-container,
       .menubar-container ul,
+      .menubar-container ul>li a,
       .footer-container,
       .search-result-message,
       .content main figure,
@@ -100,9 +131,21 @@
         min-width: 550px;
         --areaBackground: rgb(88, 88, 88);
       }
-      .content {
+      .content,
+        .movie-description{
+          display:flex;
+          flex-direction:row;
+
         --areaBackground: white;
       }
+      .content>main{
+        flex:3;
+      }
+      .content>aside{
+        font-size: .8em;
+        flex:1;
+      }
+
       .content > main,
       .content > aside,
       .center_column > footer,
