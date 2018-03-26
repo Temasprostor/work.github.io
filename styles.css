@@ -1,9 +1,11 @@
-
 body {
   background: #d5d5d5 url(assets/images/back.jpg) 50% 0 no-repeat;
   color: #333;
   font: .8em tahoma, verdana, arial normal;
   --orangeColor: #f60;
+}
+h1 a:hover {
+  filter: url(#blurMe);
 }
 a {
   text-decoration: none;
@@ -22,6 +24,7 @@ a[href="#top"]{
     position:absolute;
     top:.3em;
     left:3.7em;
+  }
   }
 a:hover, mark, h1,
   .content article>header,
