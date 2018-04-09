@@ -5,7 +5,6 @@ class Animal{
     }
   }
 }
-
  class Lion extends Animal{
    constructor(){
      super();
@@ -80,7 +79,7 @@ MyMath.factorial = function(n) {
     } else if(n<0){
       console.log('error:number must >0');
       return;
-    }else{ 
+    }else{
         return n * MyMath.factorial(n - 1);
     }
 }
