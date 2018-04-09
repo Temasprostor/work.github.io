@@ -1,26 +1,24 @@
-class Animal{
-  constructor(){
-    this.eat=function(f){
-      console.log('eat ',f);
-    }
-  }
+function Animal(){
 }
- class Lion extends Animal{
-   constructor(){
-     super();
-     this.run=function(){
+
+Animal.prototype.eat = function (f){
+  console.log('eat ',f);
+}
+
+
+ function Lion (){}
+Lion.prototype.__proto__ = Animal.prototype;
+Lion.prototype.run=function(){
        console.log('running');
-     }
-   }
- }
- class Rabbit extends Animal{
-   constructor(){
-     super();
-     this.jump=function(){
+}
+
+
+  function Rabbit(){}
+  Rabbit.prototype.__proto__ = Animal.prototype;
+  Rabbit.prototype.jump=function(){
        console.log('jumping');
      }
-   }
- }
+     
 
 function MyMath(){}
 
