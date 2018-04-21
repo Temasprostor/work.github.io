@@ -23,7 +23,6 @@ function commentSubmit(event){
   return false;
 }
 
-
 document.addEventListener('DOMContentLoaded', function(){
   comment.addEventListener("submit", commentSubmit);
 }, false);
