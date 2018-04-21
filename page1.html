@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/styles/base.css" />
     <link rel="stylesheet" href="assets/styles/film-page.css" />
+    <script async type="text/javascript" src="form.js"></script>
 </head>
 <body>
   <div class="center_column">
@@ -97,7 +98,9 @@
         </article>
 
         <section class="comments">
-          <form>
+          <div id="comments">
+          </div>
+          <form id="comment">
             <div>
               <label class="required" for="username">Имя</label>
               <input id="username" name="username" type="text" required />
@@ -115,7 +118,6 @@
             </div>
           </form>
         </section>
-
       </main>
     </div>
 
